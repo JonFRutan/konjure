@@ -3,9 +3,40 @@ TO ENTER VIRTUAL ENVIRONMENT:
 TO EXIT VIRTUAL ENVIRONMENT:
 > deactivate
 
+python3 -m venv sklearn-env
+'-m' runs a module as a script, in our vase 'venv'.
+'venv' is a module that creates a virtual environment.
+The purpose of the virtual environment is to isolate and easily manage the required dependencies.
+
+TF-IDF
+TF: "Term Frequency" - How often a word appears in a document.
+IDF: "Inverse Document Frequency" - Measures the importance of a word based on it's cumulative rarity through documents.
+Multiplying these values together (fit()) results in a TF-IDF matrix.
+The matrix is transformed (transform()) with the vocabulary of the documents, resulting in a sparse-matrix.
+Each row in this matrix represents a document (query) and each column is a word in the vocabulary with it's TF-IDF score.
+These scores are relevant when working with TfidVectorizer and LogisiticRegression.
+
+MultinomialNB:
+Probability classifier based on Bayes' Theorem.
+Naive Bayes assumes features (word counts / frequencies) are indepedent of one another.
+It estimates the probability of each class based on observed features, and selects the class with 
+the highest probability. Compare this to LogisticRegression.
+
+LogisticRegression:
+Linear classifier that estimates probability of class association using the sigmoid function.
+It assumes a linear relationship between features and the odds of the outcome.
+Through this, it finds decision boundaries which are used to classify our data.
+Compare this to Naive Bayes / MultinomialNB
+
 Sigmoid Function:
 The sigmoid function maps any number to a value between 0 and 1.
 The formula is σ(x) = 1 / (1 + e ^ (-x))
 Where x is the input (any real number, +-)
 e is Euler's number (~2.718)
 The sigmoid function is useful for converting any real number into a value between 0 and 1.
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+What's the difference?
+Using MultinomialNB alongside CountVectorizer (Scikit) is to prioritize performance in text-based classification.
+We classify our documents based on word occurrences and frequencies.
+Using TfidVectorizer alongside LogisticRegression will offer better(?) results at the expense of computation.

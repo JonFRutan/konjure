@@ -1,0 +1,9 @@
+Libraries:
+Scikit-Learn - https://scikit-learn.org/stable/
+Machine learning library.
+Data analysis, regression analysis, clustering, object classification.
+This admittedly does almost all the AI-related work in my project.
+
+Pickle - https://docs.python.org/3/library/pickle.html
+Used for serializing and de-serializing a Python object.
+I will use pickle to save on processing time by avoiding having the vectorize and fit my model every time I invoke a call.

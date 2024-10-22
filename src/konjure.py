@@ -1,8 +1,5 @@
 #jfr
-import math
+import pickle
+from sklearn.feature_extraction.text import TfidVectorizer
+from sklearn.linear_model import LogisticRegression
 
-def main() :
-    print("Hello, World!")
-
-if __name__ == "__main__":
-    main()
