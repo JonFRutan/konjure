@@ -8,6 +8,10 @@ python3 -m venv sklearn-env
 'venv' is a module that creates a virtual environment.
 The purpose of the virtual environment is to isolate and easily manage the required dependencies.
 
+T5 - 
+Text Transformation To 
+
+
 TF-IDF
 TF: "Term Frequency" - How often a word appears in a document.
 IDF: "Inverse Document Frequency" - Measures the importance of a word based on it's cumulative rarity through documents.
